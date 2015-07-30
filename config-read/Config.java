@@ -18,7 +18,7 @@ public class Config {
 	 */
 	private Config() {
 		try {
-			properties.load(getClass().getResourceAsStream(configName));
+			properties.load(new InputStreamReader(getClass().getResourceAsStream(configName),"UTF-8"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
